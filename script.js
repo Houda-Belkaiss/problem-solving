@@ -83,3 +83,22 @@ function calculateAverage(student){
   }
 //   console.log(getSuccessfulStudents(students)) 
 
+ function getBestStudent(students){
+  let max = 0;
+  let milleureStudent = 0;
+let student = getSuccessfulStudents(students);
+student.forEach(element => {
+ // console.log(element);
+  let moyenne = calculateAverage(element);
+  if (moyenne > max ) {
+    max = moyenne
+   milleureStudent = element;
+  }
+ 
+  
+ })
+ console.log(max);
+ console.log(milleureStudent);
+ 
+ }
+ getBestStudent(students);
