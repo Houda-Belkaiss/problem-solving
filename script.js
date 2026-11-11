@@ -97,8 +97,23 @@ student.forEach(element => {
  
   
  })
- console.log(max);
- console.log(milleureStudent);
+ 
+ return milleureStudent;
  
  }
- getBestStudent(students);
+//console.log(getBestStudent(students));
+
+function addGrade(students, studentId, grade){
+  let findStudent;
+ students.forEach(element => {
+  if (element.id == studentId) {
+    findStudent = element.grades;
+  }
+ 
+ })
+ // console.log(findStudent);
+  findStudent.push(grade);
+  return findStudent;
+}
+ console.log(addGrade(students, 3, 12));
+  
